@@ -3,9 +3,12 @@ import time
 try:
 	while True:
 		GPIO.setmode(GPIO.BCM)
-		GPIO.setup(18, GPIO.OUT)
-		GPIO.output(18, 1)
+		GPIO.setup(2, GPIO.OUT)
+		GPIO.output(2, 1)
+		print ("LED on")
 		time.sleep(1)
-		GPIO.output(18, 0)
+		GPIO.output(2, 0)
+		print ("LED off")
+		time.sleep(1)
 except KeyboardInterrupt:
 	GPIO.cleanup()
